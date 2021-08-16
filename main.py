@@ -10,7 +10,7 @@ capture.set(cv2.CAP_PROP_FRAME_WIDTH, 600)
 
 
 while not cv2.waitKey(20) & 0xFF == ord("q"):
-    i = i + 1
+    
     ret, frame = capture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY )
     faces = faceClassifier.detectMultiScale(gray)
